@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coderbunker - Pitch Deck Interactif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Empêche le défilement de la page entière */
+        }
+        .slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100vh;
+        }
+        .slide {
+            flex: 0 0 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            box-sizing: border-box;
+            overflow-y: auto; /* Permet le défilement si le contenu dépasse */
+        }
+        /* Style pour une meilleure lisibilité sur fond sombre */
+        .dark-slide {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .dark-slide h1, .dark-slide h2 {
+            color: white;
+        }
+        /* Style pour une meilleure lisibilité sur fond clair */
+        .light-slide {
+            background-color: #f7fafc;
+            color: #4a5568;
+        }
+        .light-slide h1, .light-slide h2 {
+            color: #1a202c;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Conteneur principal des diapositives -->
+    <div id="slides-container" class="slides-container">
+        
+        <!-- Diapositive 1 : Titre -->
+        <section class="slide dark-slide">
+            <div class="text-center max-w-4xl">
+                <h1 class="text-6xl font-bold mb-4">Coderbunker</h1>
+                <p class="text-3xl text-gray-300 mb-6">L'Écosystème de Talents Open Source</p>
+                <p class="text-xl bg-indigo-600 text-white py-2 px-4 rounded-lg inline-block">Construire des Équipes Éprouvées, Pas Seulement des Profils.</p>
+            </div>
+        </section>
+
+        <!-- Diapositive 2 : Le Problème -->
+        <section class="slide light-slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10">Le Recrutement Technique est Cassé. C'est un Pari Coûteux.</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-bold text-xl mb-2 text-red-600">Les CVs sont des Fictions</h3>
+                        <p>42% des entreprises luttent pour vérifier les compétences. Les compétences déclarées ne sont pas des compétences prouvées.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-bold text-xl mb-2 text-yellow-600">Les Tests Techniques sont Insuffisants</h3>
+                        <p>Les tests d'algorithmes ne prédisent pas la performance réelle en équipe ou la capacité à résoudre des problèmes complexes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-bold text-xl mb-2 text-orange-600">Les Mauvaises Embauches sont Dévastatrices</h3>
+                        <p>Une mauvaise embauche coûte jusqu'à 30% du salaire annuel, sans compter les pertes de productivité et de moral.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">L'Ère de l'IA Change la Donne</h3>
+                        <p>La valeur se déplace vers les compétences humaines : communication, gestion de produit, et adéquation culturelle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 3 : Notre Solution -->
+        <section class="slide dark-slide">
+            <div class="text-center max-w-5xl">
+                <h2 class="text-4xl font-bold mb-4">Nous ne Trouvons pas de Talents. Nous les Bâtissons.</h2>
+                <p class="text-lg text-gray-400 mb-10">Un écosystème qui transforme le risque du recrutement en avantage compétitif.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-white">
+                    <div class="bg-gray-800 p-6 rounded-xl border border-indigo-500 w-72 h-56 flex flex-col justify-center">
+                        <span class="text-indigo-400 font-bold text-lg">ÉTAPE 1</span>
+                        <h3 class="text-2xl font-bold mt-2">ATTIRER</h3>
+                        <p class="mt-2 text-gray-300">Un créateur de CV open source (cv.coderbunker.ca) pour attirer une large communauté.</p>
+                    </div>
+                    <div class="text-3xl text-indigo-400 font-mono hidden md:block">&gt;&gt;</div>
+                    <div class="bg-gray-800 p-6 rounded-xl border border-indigo-500 w-72 h-56 flex flex-col justify-center">
+                        <span class="text-indigo-400 font-bold text-lg">ÉTAPE 2</span>
+                        <h3 class="text-2xl font-bold mt-2">DÉVELOPPER & VALIDER</h3>
+                        <p class="mt-2 text-gray-300">Une communauté avec mentorat et contributions à des projets réels.</p>
+                    </div>
+                    <div class="text-3xl text-indigo-400 font-mono hidden md:block">&gt;&gt;</div>
+                    <div class="bg-gray-800 p-6 rounded-xl border border-indigo-500 w-72 h-56 flex flex-col justify-center">
+                        <span class="text-indigo-400 font-bold text-lg">ÉTAPE 3</span>
+                        <h3 class="text-2xl font-bold mt-2">PLACER</h3>
+                        <p class="mt-2 text-gray-300">Un marché connectant les entreprises à des individus et équipes pré-formées.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 4 : Opportunité de Marché -->
+        <section class="slide light-slide">
+            <div class="text-center max-w-5xl">
+                <h2 class="text-4xl font-bold mb-8">Un Marché de 200 Milliards de Dollars en Quête de Signaux Fiables</h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+                        <p class="text-4xl font-bold text-indigo-600">$198.8B</p>
+                        <p class="mt-2">Taille du Marché Mondial du Recrutement TI en 2025.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+                        <p class="text-4xl font-bold text-indigo-600">89%</p>
+                        <p class="mt-2">Des leaders technologiques peinent à trouver les bonnes compétences.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+                        <p class="text-4xl font-bold text-indigo-600">Pénurie</p>
+                        <p class="mt-2">Forte demande pour les talents en IA, cybersécurité et cloud.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg w-64">
+                        <p class="text-4xl font-bold text-indigo-600">Montréal</p>
+                        <p class="mt-2">Hub mondial de l'IA avec une croissance de talents très rapide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 5 : Le Produit & La Communauté -->
+        <section class="slide dark-slide">
+             <div class="max-w-6xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10">De l'Outil à l'Équipe : Le Parcours du Développeur</h2>
+                 <div class="bg-gray-800 rounded-lg p-8 border border-gray-700">
+                    <div class="grid grid-cols-5 gap-4 text-center font-bold text-indigo-300 mb-4">
+                        <div>Étape 1: Création</div>
+                        <div>Étape 2: Engagement</div>
+                        <div>Étape 3: Contribution</div>
+                        <div>Étape 4: Validation</div>
+                        <div>Étape 5: Opportunité</div>
+                    </div>
+                    <div class="relative h-1 bg-gray-700 rounded-full mb-8">
+                        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-600"></div>
+                        <div class="absolute top-1/2 left-0 w-full flex justify-between -translate-y-1/2">
+                            <div class="w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-800"></div>
+                            <div class="w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-800"></div>
+                            <div class="w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-800"></div>
+                            <div class="w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-800"></div>
+                            <div class="w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-800"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-5 gap-4 text-center text-gray-300">
+                        <p>L'utilisateur crée son CV via notre outil open source.</p>
+                        <p>Il rejoint la communauté (meetups, Discord) et participe.</p>
+                        <p>Il contribue à un projet OBNL, créant un portfolio tangible.</p>
+                        <p>Ses compétences sont évaluées par des seniors et il obtient un badge "Vérifié".</p>
+                        <p>Son profil est visible par nos partenaires et il peut rejoindre une équipe.</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 6 : Le Modèle d'Affaires -->
+        <section class="slide light-slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10">Open Core : La Communauté d'Abord, la Monétisation Ensuite</h2>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex-1 bg-white p-8 rounded-lg shadow-lg border-2 border-green-400">
+                        <h3 class="text-2xl font-bold text-green-600">Noyau Open Source (Gratuit)</h3>
+                        <p class="mt-4"><strong class="text-gray-800">Produit :</strong> cv.coderbunker.ca (créateur de CV, profil public).</p>
+                        <p class="mt-2"><strong class="text-gray-800">Licence :</strong> AGPLv3. Empêche les concurrents de "vampiriser" notre code, les incitant à devenir partenaires.</p>
+                        <p class="mt-2"><strong class="text-gray-800">Objectif :</strong> Maximiser l'adoption et la croissance de la communauté.</p>
+                    </div>
+                    <div class="flex-1 bg-white p-8 rounded-lg shadow-lg border-2 border-blue-400">
+                        <h3 class="text-2xl font-bold text-blue-600">Couche Commerciale (Payante)</h3>
+                        <p class="mt-4"><strong class="text-gray-800">Placement de Talents :</strong> Notre principale source de revenus (prime de placement ou % sur taux horaire).</p>
+                        <p class="mt-2"><strong class="text-gray-800">Abonnements Entreprise (Futur) :</strong> Accès à des fonctionnalités avancées (recherche, ATS).</p>
+                        <p class="mt-2"><strong class="text-gray-800">Hackathons d'Entreprise :</strong> Organisation de hackathons privés comme service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 7 : Avantage Concurrentiel -->
+        <section class="slide dark-slide">
+            <div class="max-w-6xl w-full">
+                 <h2 class="text-4xl font-bold text-center mb-10">Là Où les Autres Filtrent, Nous Bâtissons.</h2>
+                 <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-800">
+                            <th class="p-4 border border-gray-700">Concurrent</th>
+                            <th class="p-4 border border-gray-700">Modèle de Validation</th>
+                            <th class="p-4 border border-gray-700">Modèle d'Affaires</th>
+                            <th class="p-4 border border-gray-700">Faiblesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-gray-900">
+                            <td class="p-4 border border-gray-700 font-bold">Toptal</td>
+                            <td class="p-4 border border-gray-700">Élitiste & Algorithmique ("Top 3%")</td>
+                            <td class="p-4 border border-gray-700">Propriétaire</td>
+                            <td class="p-4 border border-gray-700 text-red-400">Exclut 97% du talent, validation impersonnelle.</td>
+                        </tr>
+                        <tr class="bg-gray-800">
+                            <td class="p-4 border border-gray-700 font-bold">Agences (Randstad, etc.)</td>
+                            <td class="p-4 border border-gray-700">Basé sur le CV & l'Entretien</td>
+                            <td class="p-4 border border-gray-700">Propriétaire</td>
+                            <td class="p-4 border border-gray-700 text-red-400">Validation technique faible, pas de preuve de collaboration.</td>
+                        </tr>
+                         <tr class="bg-gray-900">
+                            <td class="p-4 border border-gray-700 font-bold">LinkedIn</td>
+                            <td class="p-4 border border-gray-700">Auto-déclaré & Tests en ligne</td>
+                            <td class="p-4 border border-gray-700">Propriétaire</td>
+                            <td class="p-4 border border-gray-700 text-red-400">Signal faible, beaucoup de bruit, pas de validation humaine.</td>
+                        </tr>
+                        <tr class="bg-indigo-900/50">
+                            <td class="p-4 border border-indigo-700 font-bold text-white">Coderbunker</td>
+                            <td class="p-4 border border-indigo-700 text-indigo-300">Inclusif & Basé sur la Preuve</td>
+                            <td class="p-4 border border-indigo-700 text-indigo-300">Open Source & Communautaire</td>
+                            <td class="p-4 border border-indigo-700 text-green-400">Notre Force</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </div>
+        </section>
+
+        <!-- Diapositive 8 : L'Équipe Fondatrice -->
+        <section class="slide light-slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10">La Synergie Parfaite : Bâtisseur de Communauté & Bâtisseur de Produit</h2>
+                <div class="flex flex-col md:flex-row gap-8 justify-center">
+                    <div class="flex-1 bg-white p-6 rounded-lg shadow-xl text-center">
+                        <h3 class="text-2xl font-bold">Ricky Ng-Adam</h3>
+                        <p class="text-indigo-600 font-semibold">Leader Communauté & Stratégie</p>
+                        <ul class="text-left mt-4 space-y-2 list-disc list-inside">
+                            <li>Fondateur de Coderbunker, La Console, XinCheJian.</li>
+                            <li>Ex-Google (Ingénieur en Test), CISSP.</li>
+                            <li>Expert en DevOps, processus et levée de fonds.</li>
+                        </ul>
+                    </div>
+                     <div class="flex-1 bg-white p-6 rounded-lg shadow-xl text-center">
+                        <h3 class="text-2xl font-bold">Alexandre Michaud</h3>
+                        <p class="text-indigo-600 font-semibold">Architecte Produit & Ingénierie</p>
+                         <ul class="text-left mt-4 space-y-2 list-disc list-inside">
+                            <li>+18 ans d'expérience backend (NodeJS, PostgreSQL).</li>
+                            <li>A développé seul la V1 de cv.coderbunker.ca.</li>
+                            <li>Expérience pragmatique en startup et freelance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 9 : Traction & Feuille de Route -->
+        <section class="slide dark-slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10">Déjà en Mouvement, avec une Vision Claire</h2>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">Traction à ce Jour</h3>
+                    <ul class="space-y-2 text-lg">
+                        <li><span class="text-green-400">✅</span> Produit MVP Déployé : cv.coderbunker.ca est en ligne.</li>
+                        <li><span class="text-green-400">✅</span> Code Open Source sur GitHub.</li>
+                        <li><span class="text-green-400">✅</span> Communauté d'Amorçage existante.</li>
+                    </ul>
+                </div>
+                <div>
+                     <h3 class="text-2xl font-bold text-indigo-400 mb-4">Feuille de Route sur 18 Mois</h3>
+                     <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg">Phase 1 (6 mois)</h4>
+                            <p class="text-gray-400">Lancement & Croissance Communautaire. Objectif : 1000 utilisateurs.</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg">Phase 2 (6 mois)</h4>
+                            <p class="text-gray-400">Validation du Modèle. Placer la 1ère équipe, premiers revenus.</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-lg">Phase 3 (6 mois)</h4>
+                            <p class="text-gray-400">Mise à l'Échelle. Développer les fonctions B2B. Objectif : 25k$ MRR.</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 10 : La Demande -->
+        <section class="slide light-slide">
+            <div class="max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-4">Carburant pour l'Écosystème</h2>
+                <p class="text-2xl mb-8">Nous levons <span class="bg-yellow-200 px-2 py-1 rounded">750 000 $</span> en pré-amorçage pour accélérer notre croissance.</p>
+                <div class="w-full bg-gray-200 rounded-full h-8 dark:bg-gray-700 flex overflow-hidden shadow-inner">
+                    <div class="flex flex-col justify-center overflow-hidden bg-blue-500 text-xs text-white text-center" style="width: 45%" role="progressbar">Développement Produit (45%)</div>
+                    <div class="flex flex-col justify-center overflow-hidden bg-green-500 text-xs text-white text-center" style="width: 35%" role="progressbar">Croissance Communauté (35%)</div>
+                    <div class="flex flex-col justify-center overflow-hidden bg-indigo-500 text-xs text-white text-center" style="width: 20%" role="progressbar">Ventes & Marketing (20%)</div>
+                </div>
+                 <div class="mt-8 text-left grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-lg text-blue-700">Objectif 1</h4>
+                        <p>Communauté de 10 000+ développeurs.</p>
+                    </div>
+                     <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-lg text-green-700">Objectif 2</h4>
+                        <p>20+ équipes placées avec succès.</p>
+                    </div>
+                     <div class="bg-white p-4 rounded-lg shadow">
+                        <h4 class="font-bold text-lg text-indigo-700">Objectif 3</h4>
+                        <p>Un revenu récurrent de 75 000 $/mois.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diapositive 11 : Contact -->
+        <section class="slide dark-slide">
+             <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Coderbunker</h1>
+                <p class="text-2xl text-gray-300 mb-8">Rejoignez-nous pour construire l'avenir du recrutement technique.</p>
+                <div class="flex flex-col md:flex-row gap-10 justify-center">
+                    <div class="text-lg">
+                        <p class="font-bold text-white">Ricky Ng-Adam</p>
+                        <p>Co-fondateur & Stratégie</p>
+                        <a href="https://linkedin.com/in/rngadam" class="text-indigo-400 hover:underline">linkedin.com/in/rngadam</a>
+                    </div>
+                    <div class="text-lg">
+                        <p class="font-bold text-white">Alexandre Michaud</p>
+                        <p>Co-fondateur & Ingénierie</p>
+                        <a href="https://linkedin.com/in/alexmichaud123" class="text-indigo-400 hover:underline">linkedin.com/in/alexmichaud123</a>
+                    </div>
+                </div>
+                 <p class="mt-10 text-xl font-bold"><a href="https://cv.coderbunker.ca" class="text-white bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-700 transition">cv.coderbunker.ca</a></p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-6 z-10">
+        <button id="prevBtn" class="bg-white/20 text-white backdrop-blur-sm rounded-full p-3 hover:bg-white/40 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div id="nav-dots" class="flex gap-2">
+            <!-- Dots will be generated by JS -->
+        </div>
+        <button id="nextBtn" class="bg-white/20 text-white backdrop-blur-sm rounded-full p-3 hover:bg-white/40 transition">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+    </div>
+
+    <script>
+        const slidesContainer = document.getElementById('slides-container');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const navDotsContainer = document.getElementById('nav-dots');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Générer les points de navigation
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-white/30', 'transition', 'hover:bg-white/60');
+            dot.addEventListener('click', () => goToSlide(i));
+            navDotsContainer.appendChild(dot);
+        }
+        const navDots = navDotsContainer.querySelectorAll('button');
+
+        function updateNavigation() {
+            // Mise à jour de la transformation pour le défilement
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}vw)`;
+
+            // Mise à jour des boutons Précédent/Suivant
+            prevBtn.disabled = currentSlide === 0;
+            prevBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+            nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0.5' : '1';
+            
+            // Mise à jour des points de navigation
+            navDots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-white/30');
+                    dot.classList.add('bg-white');
+                } else {
+                    dot.classList.add('bg-white/30');
+                    dot.classList.remove('bg-white');
+                }
+            });
+        }
+
+        function goToSlide(slideNumber) {
+            currentSlide = slideNumber;
+            updateNavigation();
+        }
+
+        function showNextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateNavigation();
+            }
+        }
+
+        function showPrevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateNavigation();
+            }
+        }
+
+        // Écouteurs d'événements
+        prevBtn.addEventListener('click', showPrevSlide);
+        nextBtn.addEventListener('click', showNextSlide);
+
+        // Navigation avec les touches du clavier
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                showNextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                showPrevSlide();
+            }
+        });
+
+        // Initialiser la première diapositive
+        updateNavigation();
+    </script>
+</body>
+</html>
