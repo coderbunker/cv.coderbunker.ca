@@ -1,0 +1,1 @@
+import{ak as t}from"./index-DYpAkYn8.js";import{a as o,o as n}from"./vendor-BrdkcOQB.js";import"./icons-D73BmhPt.js";const r={};function c(e,s){return n(),o("h2",null,"En construction / Under construction")}const f=t(r,[["render",c]]);export{f as default};
