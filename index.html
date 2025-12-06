@@ -5,12 +5,38 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern resume</title>
-    <script type="module" crossorigin src="/assets/index-DYpAkYn8.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-BrdkcOQB.js">
-    <link rel="modulepreload" crossorigin href="/assets/icons-D73BmhPt.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-QPcl129i.css">
+    <style>
+      /* Critical CSS - loaded inline to prevent FOUC on slow networks */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff !important;
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      #app {
+        min-height: 100vh;
+        background: #ffffff;
+      }
+      /* Hide ElementPlus overlays until app is ready */
+      body.app-loading .el-overlay,
+      body.app-loading .el-loading-mask,
+      body.app-loading .v-modal {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-B9ROS4ti.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-CiY54AWt.js">
+    <link rel="modulepreload" crossorigin href="/assets/icons-B8bd2mqt.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DMUBMfmR.css">
   </head>
-  <body>
+  <body class="app-loading">
     <div id="app"></div>
   </body>
 </html>
