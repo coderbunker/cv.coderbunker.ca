@@ -1,0 +1,1 @@
+import{_ as t}from"./index-CMcPdPOF.js";import{a as o,o as n}from"./vendor-D_LTRO9P.js";import"./icons-abWZEz4B.js";const r={};function c(e,s){return n(),o("h2",null,"En construction / Under construction")}const f=t(r,[["render",c]]);export{f as default};
